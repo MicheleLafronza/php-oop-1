@@ -1,5 +1,7 @@
 <?php
 
+    require_once __DIR__ . '/Movie.php';
+
     class Cast {
 
         public $protagonist;
@@ -10,6 +12,10 @@
             $this->protagonist = $_protagonist;
             $this->secondary_actor = $_secondary_actor;
 
+        }
+
+        public function getFullCast(){
+            return $this->protagonist . ' , ' . $this->secondary_actor;
         }
 
     }

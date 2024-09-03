@@ -7,18 +7,18 @@
 
         // proprietà
         public $title;
-        public $lenght;
         public $language;
+        public $length;
         public $genres = [];
         public $cast;
 
         // funzione costrutto
-        function __construct($_title, $_language, $_lenght, $_genre, Cast $_cast){
+        function __construct($_title, $_language, $_length, array $_genres, Cast $_cast){
 
             $this->title = $_title;
             $this->language = $_language;
-            $this->lenght = $_lenght;
-            $this->genres = $_genre;
+            $this->length = $_length;
+            $this->genres = $_genres;
             $this->cast = $_cast;
 
         }
@@ -39,14 +39,7 @@
         // funzione che stampa durata
         public function printLen(){
 
-            return $this->lenght;
-
-        }
-
-        // funzione che aggiunge generi
-        public function addGenres($_genre){
-
-            $this->genres[] = $_genre;
+            return $this->length;
 
         }
 
@@ -55,7 +48,7 @@
 
             $genres_list = '';
 
-            foreach($genres_list as $genre){
+            foreach($this->genres as $genre){
 
                 $genres_list .= "<li>$genre</li>";
 
