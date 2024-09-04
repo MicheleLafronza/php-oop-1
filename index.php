@@ -38,7 +38,9 @@ require_once __DIR__ . '/data/movie_db.php';
                         <?php echo $film->printGenresList() ?>
                     </ul>
 
-                    <p class="card-text">Attori Principali: <?php echo $film->cast->getFullCast() ?></p>
+                    <p class="card-text">Attori Principali: <?php echo $film->cast->printPrimaryActors() ?></p>
+
+                    <p class="card-text">Attori Secondari: <?php echo $film->cast->printSecondaryActors() ?></p>
 
                 </div>
 
